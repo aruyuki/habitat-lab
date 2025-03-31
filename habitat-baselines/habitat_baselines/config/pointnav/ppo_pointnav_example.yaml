@@ -10,13 +10,13 @@ defaults:
 
 habitat_baselines:
   trainer_name: "ppo"
-  torch_gpu_id: 0
+  torch_gpu_id: -1  # CPUで明示的に動かす
+  num_environments: 1
   tensorboard_dir: "tb"
   video_dir: "video_dir"
   # To evaluate on all episodes, set this to -1
   test_episode_count: 2
   eval_ckpt_path_dir: "data/new_checkpoints"
-  num_environments: 1
   checkpoint_folder: "data/new_checkpoints"
   num_updates: -1
   total_num_steps: 1e6
